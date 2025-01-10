@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import MagicButton from './ui/MagicButton'
@@ -32,11 +33,12 @@ const Hero = () => {
             text-center md:text-left 
             gap-10 
           ">
-            <div className="md:hidden flex justify-center w-full mb-10">
-              <img 
+              <Image 
                 src="/me.png" 
                 alt="Profile" 
-                className="w-[200px] h-[200px] rounded-full object-cover"
+                width={200}
+                height={200}
+                className="rounded-full object-cover"
               />
             </div>
 
@@ -65,14 +67,15 @@ const Hero = () => {
 
             {/* Untuk desktop, gambar akan di samping */}
             <div className="hidden md:flex items-center justify-end"> 
-              <img 
+              <Image 
                 src="/me.png" 
                 alt="Profile" 
+                width={400}
+                height={300}
                 className="w-[300px] md:w-[400px] h-[300px] rounded-full object-cover"
               />
             </div>
           </div>
-        </div>      
       </div>
   )
 }
